@@ -1,0 +1,2618 @@
+<?xml version="1.0"?>
+<OWASPZAPReport programName="ZAP" version="2.17.0" generated="Sat, 26 Sept 2026 08:07:56" created="2026-09-26T08:07:56.726110365Z">
+	
+		<site name="http://172.19.0.3" host="172.19.0.3" port="80" ssl="false">
+			<alerts>
+				
+					<alertitem>
+						<pluginid>10202</pluginid>
+						<alertRef>10202</alertRef>
+						<alert>Absence of Anti-CSRF Tokens</alert>
+						<name>Absence of Anti-CSRF Tokens</name>
+						<riskcode>2</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Medium (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;No Anti-CSRF tokens were found in a HTML submission form.&lt;/p&gt;&lt;p&gt;A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;CSRF attacks are effective in a number of situations, including:&lt;/p&gt;&lt;p&gt;    * The victim has an active session on the target site.&lt;/p&gt;&lt;p&gt;    * The victim is authenticated via HTTP auth on the target site.&lt;/p&gt;&lt;p&gt;    * The victim is on the same local network as the target site.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;CSRF has primarily been used to perform an action against a target site using the victim&apos;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/?page=text-file-viewer.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/ (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;form 	action=&quot;index.php?page=text-file-viewer.php&quot; 
+		method=&quot;post&quot; 
+		enctype=&quot;application/x-www-form-urlencoded&quot;&gt;</evidence>
+									<otherinfo>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 1: &quot;text-file-viewer-php-submit-button&quot; ].</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=login.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;form 	action=&quot;index.php?page=login.php&quot; 
+			method=&quot;post&quot; 
+			enctype=&quot;application/x-www-form-urlencoded&quot; 
+			onsubmit=&quot;return onSubmitOfLoginForm(this);&quot;
+			id=&quot;idLoginForm&quot;&gt;</evidence>
+									<otherinfo>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 1: &quot;login-php-submit-button&quot; &quot;password&quot; &quot;username&quot; ].</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=view-someones-blog.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;form action=&quot;index.php?page=view-someones-blog.php&quot; method=&quot;post&quot; enctype=&quot;application/x-www-form-urlencoded&quot;&gt;</evidence>
+									<otherinfo>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 1: &quot;view-someones-blog-php-submit-button&quot; ].</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;form method=&quot;post&quot; action=&quot;index.php&quot; name=&quot;login_form&quot; autocomplete=&quot;off&quot; target=&quot;_top&quot; class=&quot;login&quot;&gt;</evidence>
+									<otherinfo>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 2: &quot;convcharset&quot; &quot;input_go&quot; &quot;input_password&quot; &quot;input_username&quot; &quot;lang&quot; &quot;phpMyAdmin&quot; &quot;server&quot; &quot;token&quot; ].</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;form method=&quot;post&quot; action=&quot;index.php&quot; target=&quot;_parent&quot;&gt;</evidence>
+									<otherinfo>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 1: &quot;convcharset&quot; &quot;db&quot; &quot;lang&quot; &quot;phpMyAdmin&quot; &quot;table&quot; &quot;token&quot; ].</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Phase: Architecture and Design&lt;/p&gt;&lt;p&gt;Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.&lt;/p&gt;&lt;p&gt;For example, use anti-CSRF packages such as the OWASP CSRFGuard.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Phase: Implementation&lt;/p&gt;&lt;p&gt;Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Phase: Architecture and Design&lt;/p&gt;&lt;p&gt;Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).&lt;/p&gt;&lt;p&gt;Note that this can be bypassed using XSS.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.&lt;/p&gt;&lt;p&gt;Note that this can be bypassed using XSS.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Use the ESAPI Session Management control.&lt;/p&gt;&lt;p&gt;This control includes a component for CSRF.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Do not use the GET method for any request that triggers a state change.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Phase: Implementation&lt;/p&gt;&lt;p&gt;Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 1: &quot;text-file-viewer-php-submit-button&quot; ].&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://cwe.mitre.org/data/definitions/352.html&lt;/p&gt;</reference>
+						<cweid>352</cweid>
+						<wascid>9</wascid>
+						<sourceid>275</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90022</pluginid>
+						<alertRef>90022</alertRef>
+						<alert>Application Error Disclosure</alert>
+						<name>Application Error Disclosure</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/</uri>
+									<nodeName>http://172.19.0.3/dav/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Parent Directory</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=D;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Parent Directory</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/</uri>
+									<nodeName>http://172.19.0.3/mutillidae/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Can&apos;t connect to local</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=login.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Can&apos;t connect to local</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>4</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference></reference>
+						<cweid>550</cweid>
+						<wascid>13</wascid>
+						<sourceid>19</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10038</pluginid>
+						<alertRef>10038-1</alertRef>
+						<alert>Content Security Policy (CSP) Header Not Set</alert>
+						<name>Content Security Policy (CSP) Header Not Set</name>
+						<riskcode>2</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Medium (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page &#x2014; covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=D;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/robots.txt</uri>
+									<nodeName>http://172.19.0.3/robots.txt</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/sitemap.xml</uri>
+									<nodeName>http://172.19.0.3/sitemap.xml</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP&lt;/p&gt;&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-csp/&lt;/p&gt;&lt;p&gt;https://web.dev/articles/csp&lt;/p&gt;&lt;p&gt;https://caniuse.com/#feat=contentsecuritypolicy&lt;/p&gt;&lt;p&gt;https://content-security-policy.com/&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10033</pluginid>
+						<alertRef>10033</alertRef>
+						<alert>Directory Browsing</alert>
+						<name>Directory Browsing</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;It is possible to view a listing of the directory contents. Directory listings may reveal hidden scripts, include files, backup source files, etc., which can be accessed to reveal sensitive information.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/</uri>
+									<nodeName>http://172.19.0.3/dav/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;title&gt;Index of /dav&lt;/title&gt;</evidence>
+									<otherinfo>Web server identified: Apache 2</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=D;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;title&gt;Index of /dav&lt;/title&gt;</evidence>
+									<otherinfo>Web server identified: Apache 2</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>2</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Configure the web server to disable directory browsing.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;Web server identified: Apache 2&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://cwe.mitre.org/data/definitions/548.html&lt;/p&gt;</reference>
+						<cweid>548</cweid>
+						<wascid>16</wascid>
+						<sourceid>19</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10020</pluginid>
+						<alertRef>10020-1</alertRef>
+						<alert>Missing Anti-clickjacking Header</alert>
+						<name>Missing Anti-clickjacking Header</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The response does not protect against &apos;ClickJacking&apos; attacks. It should include either Content-Security-Policy with &apos;frame-ancestors&apos; directive or X-Frame-Options.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/</uri>
+									<nodeName>http://172.19.0.3/dav/</nodeName>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=D;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/TWikiHistory.html</uri>
+									<nodeName>http://172.19.0.3/twiki/TWikiHistory.html</nodeName>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.&lt;/p&gt;&lt;p&gt;If you expect the page to be framed only by pages on your server (e.g. it&apos;s part of a FRAMESET) then you&apos;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&apos;s &quot;frame-ancestors&quot; directive.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options&lt;/p&gt;</reference>
+						<cweid>1021</cweid>
+						<wascid>15</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10099</pluginid>
+						<alertRef>10099</alertRef>
+						<alert>Source Code Disclosure - Perl</alert>
+						<name>Source Code Disclosure - Perl</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Application Source Code was disclosed by the web server. - Perl&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/rdiff/TWiki/TWikiAccessControl</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/rdiff/TWiki/TWikiAccessControl</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>my $web </evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://nhimg.org/twitter-breach&lt;/p&gt;</reference>
+						<cweid>540</cweid>
+						<wascid>13</wascid>
+						<sourceid>6970</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10099</pluginid>
+						<alertRef>10099</alertRef>
+						<alert>Source Code Disclosure - SQL</alert>
+						<name>Source Code Disclosure - SQL</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Application Source Code was disclosed by the web server. - SQL&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/?page=view-someones-blog.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/ (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>SELECT * FROM accounts</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/?page=add-to-your-blog.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/ (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>SELECT * FROM blogs_table WHERE</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=capture-data.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>INSERT INTO captured_data(ip_address, hostname, port, user_agent_string, referrer, data, capture_date) VALUES (</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=view-someones-blog.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>SELECT * FROM accounts</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=add-to-your-blog.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>SELECT * FROM blogs_table WHERE</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=user-info.php&amp;password=ZAP&amp;user-info-php-submit-button=View+Account+Details&amp;username=ZAP</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page,password,user-info-php-submit-button,username)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>SELECT * FROM accounts WHERE username</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/set-up-database.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/set-up-database.php</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>CREATE DATABASE owasp10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/rdiff/TWiki/ManagingWebs</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/rdiff/TWiki/ManagingWebs</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Select a template web (starting with an underscore) or an existing web as a template for the new web. All topics are copied over from a template web</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/rdiff/TWiki/TWikiTopics</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/rdiff/TWiki/TWikiTopics</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>select one form per topic from as many choices as you like</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/TWiki/TWikiTopics?rev=1.10</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/TWiki/TWikiTopics (rev)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>select one form per topic from as many choices as you like</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=login.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)(login-php-submit-button,password,username)</nodeName>
+									<method>POST</method>
+									<param></param>
+									<attack></attack>
+									<evidence>SELECT * FROM accounts WHERE username</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>11</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://nhimg.org/twitter-breach&lt;/p&gt;</reference>
+						<cweid>540</cweid>
+						<wascid>13</wascid>
+						<sourceid>346</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10003</pluginid>
+						<alertRef>10003</alertRef>
+						<alert>Vulnerable JS Library</alert>
+						<name>Vulnerable JS Library</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The identified library appears to be vulnerable.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/javascript/ddsmoothmenu/jquery.min.js</uri>
+									<nodeName>http://172.19.0.3/mutillidae/javascript/ddsmoothmenu/jquery.min.js</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>* jQuery JavaScript Library v1.3.2</evidence>
+									<otherinfo>The identified library jquery, version 1.3.2 is vulnerable.
+CVE-2011-4969
+CVE-2020-11023
+CVE-2019-11358
+CVE-2020-7656
+CVE-2012-6708
+https://nvd.nist.gov/vuln/detail/CVE-2012-6708
+http://research.insecurelabs.org/jquery/test/
+https://nvd.nist.gov/vuln/detail/CVE-2019-11358
+https://github.com/jquery/jquery.com/issues/162
+https://nvd.nist.gov/vuln/detail/CVE-2020-7656
+https://bugs.jquery.com/ticket/9521
+http://bugs.jquery.com/ticket/11290
+https://research.insecurelabs.org/jquery/test/
+https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/
+https://github.com/advisories/GHSA-q4m3-2j7h-f7xw
+https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b
+https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
+https://nvd.nist.gov/vuln/detail/CVE-2011-4969
+</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Upgrade to the latest version of the affected library.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The identified library jquery, version 1.3.2 is vulnerable.&lt;/p&gt;&lt;p&gt;CVE-2011-4969&lt;/p&gt;&lt;p&gt;CVE-2020-11023&lt;/p&gt;&lt;p&gt;CVE-2019-11358&lt;/p&gt;&lt;p&gt;CVE-2020-7656&lt;/p&gt;&lt;p&gt;CVE-2012-6708&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2012-6708&lt;/p&gt;&lt;p&gt;http://research.insecurelabs.org/jquery/test/&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2019-11358&lt;/p&gt;&lt;p&gt;https://github.com/jquery/jquery.com/issues/162&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2020-7656&lt;/p&gt;&lt;p&gt;https://bugs.jquery.com/ticket/9521&lt;/p&gt;&lt;p&gt;http://bugs.jquery.com/ticket/11290&lt;/p&gt;&lt;p&gt;https://research.insecurelabs.org/jquery/test/&lt;/p&gt;&lt;p&gt;https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/&lt;/p&gt;&lt;p&gt;https://github.com/advisories/GHSA-q4m3-2j7h-f7xw&lt;/p&gt;&lt;p&gt;https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b&lt;/p&gt;&lt;p&gt;https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2011-4969&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://owasp.org/Top10/2021/A06_2021-Vulnerable_and_Outdated_Components/&lt;/p&gt;</reference>
+						<cweid>1395</cweid>
+						<wascid>-1</wascid>
+						<sourceid>369</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10010</pluginid>
+						<alertRef>10010</alertRef>
+						<alert>Cookie No HttpOnly Flag</alert>
+						<name>Cookie No HttpOnly Flag</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/dvwa/</uri>
+									<nodeName>http://172.19.0.3/dvwa/</nodeName>
+									<method>GET</method>
+									<param>PHPSESSID</param>
+									<attack></attack>
+									<evidence>Set-Cookie: PHPSESSID</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dvwa/</uri>
+									<nodeName>http://172.19.0.3/dvwa/</nodeName>
+									<method>GET</method>
+									<param>security</param>
+									<attack></attack>
+									<evidence>Set-Cookie: security</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/</uri>
+									<nodeName>http://172.19.0.3/mutillidae/</nodeName>
+									<method>GET</method>
+									<param>PHPSESSID</param>
+									<attack></attack>
+									<evidence>Set-Cookie: PHPSESSID</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>3</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Ensure that the HttpOnly flag is set for all cookies.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://owasp.org/www-community/HttpOnly&lt;/p&gt;</reference>
+						<cweid>1004</cweid>
+						<wascid>13</wascid>
+						<sourceid>41</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10054</pluginid>
+						<alertRef>10054-1</alertRef>
+						<alert>Cookie without SameSite Attribute</alert>
+						<name>Cookie without SameSite Attribute</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/dvwa/</uri>
+									<nodeName>http://172.19.0.3/dvwa/</nodeName>
+									<method>GET</method>
+									<param>PHPSESSID</param>
+									<attack></attack>
+									<evidence>Set-Cookie: PHPSESSID</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dvwa/</uri>
+									<nodeName>http://172.19.0.3/dvwa/</nodeName>
+									<method>GET</method>
+									<param>security</param>
+									<attack></attack>
+									<evidence>Set-Cookie: security</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/</nodeName>
+									<method>GET</method>
+									<param>phpMyAdmin</param>
+									<attack></attack>
+									<evidence>Set-Cookie: phpMyAdmin</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/</nodeName>
+									<method>GET</method>
+									<param>pma_charset</param>
+									<attack></attack>
+									<evidence>Set-Cookie: pma_charset</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/</nodeName>
+									<method>GET</method>
+									<param>pma_lang</param>
+									<attack></attack>
+									<evidence>Set-Cookie: pma_lang</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+						<cweid>1275</cweid>
+						<wascid>13</wascid>
+						<sourceid>41</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90004</pluginid>
+						<alertRef>90004-2</alertRef>
+						<alert>Cross-Origin-Embedder-Policy Header Missing or Invalid</alert>
+						<name>Cross-Origin-Embedder-Policy Header Missing or Invalid</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don&apos;t explicitly grant the document permission (using CORP or CORS).&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Embedder-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/</uri>
+									<nodeName>http://172.19.0.3/dav/</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Embedder-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=D;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Embedder-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Embedder-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/TWikiDocumentation.html</uri>
+									<nodeName>http://172.19.0.3/twiki/TWikiDocumentation.html</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Embedder-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets the Cross-Origin-Embedder-Policy header to &apos;require-corp&apos; for documents.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Embedder-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy).&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>14</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90004</pluginid>
+						<alertRef>90004-3</alertRef>
+						<alert>Cross-Origin-Opener-Policy Header Missing or Invalid</alert>
+						<name>Cross-Origin-Opener-Policy Header Missing or Invalid</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Cross-Origin-Opener-Policy header is a response header that allows a site to control if others included documents share the same browsing context. Sharing the same browsing context with untrusted documents might lead to data leak.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Opener-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/</uri>
+									<nodeName>http://172.19.0.3/dav/</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Opener-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=D;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Opener-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Opener-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/TWikiDocumentation.html</uri>
+									<nodeName>http://172.19.0.3/twiki/TWikiDocumentation.html</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Opener-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that the application/web server sets the Cross-Origin-Opener-Policy header appropriately, and that it sets the Cross-Origin-Opener-Policy header to &apos;same-origin&apos; for documents.&lt;/p&gt;&lt;p&gt;&apos;same-origin-allow-popups&apos; is considered as less secured and should be avoided.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Opener-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-opener-policy).&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>14</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90004</pluginid>
+						<alertRef>90004-1</alertRef>
+						<alert>Cross-Origin-Resource-Policy Header Missing or Invalid</alert>
+						<name>Cross-Origin-Resource-Policy Header Missing or Invalid</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Cross-Origin-Resource-Policy header is an opt-in header designed to counter side-channels attacks like Spectre. Resource should be specifically set as shareable amongst different origins.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/</uri>
+									<nodeName>http://172.19.0.3/dav/</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=D;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/TWikiDocumentation.html</uri>
+									<nodeName>http://172.19.0.3/twiki/TWikiDocumentation.html</nodeName>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that the application/web server sets the Cross-Origin-Resource-Policy header appropriately, and that it sets the Cross-Origin-Resource-Policy header to &apos;same-origin&apos; for all web pages.&lt;/p&gt;&lt;p&gt;&apos;same-site&apos; is considered as less secured and should be avoided.&lt;/p&gt;&lt;p&gt;If resources must be shared, set the header to &apos;cross-origin&apos;.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Resource-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-resource-policy).&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>14</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10110</pluginid>
+						<alertRef>10110</alertRef>
+						<alert>Dangerous JS Functions</alert>
+						<name>Dangerous JS Functions</name>
+						<riskcode>1</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Low (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;A dangerous JS function seems to be in use that would leave the site vulnerable.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/dvwa/dvwa/js/dvwaPage.js</uri>
+									<nodeName>http://172.19.0.3/dvwa/dvwa/js/dvwaPage.js</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>eval(</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;See the references for security advice on the use of these functions.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://v17.angular.io/guide/security&lt;/p&gt;</reference>
+						<cweid>749</cweid>
+						<wascid>-1</wascid>
+						<sourceid>3265</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10009</pluginid>
+						<alertRef>10009</alertRef>
+						<alert>In Page Banner Information Leak</alert>
+						<name>In Page Banner Information Leak</name>
+						<riskcode>1</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Low (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;The server returned a version banner string in the response content. Such information leaks may allow attackers to further target specific issues impacting the product and version in use.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/rdiff/TWiki/TWikiHistory</uri>
+									<nodeName>http://172.19.0.3/rdiff/TWiki/TWikiHistory</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8</evidence>
+									<otherinfo>There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/rdiff/TWiki/TWikiHistory?rev1=1.10&amp;rev2=1.9</uri>
+									<nodeName>http://172.19.0.3/rdiff/TWiki/TWikiHistory (rev1,rev2)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8</evidence>
+									<otherinfo>There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/robots.txt</uri>
+									<nodeName>http://172.19.0.3/robots.txt</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8</evidence>
+									<otherinfo>There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/sitemap.xml</uri>
+									<nodeName>http://172.19.0.3/sitemap.xml</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8</evidence>
+									<otherinfo>There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/view/TWiki/TWikiHistory?rev=1.8</uri>
+									<nodeName>http://172.19.0.3/view/TWiki/TWikiHistory (rev)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8</evidence>
+									<otherinfo>There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Configure the server to prevent such information leaks. For example:&lt;/p&gt;&lt;p&gt;Under Tomcat this is done via the &quot;server&quot; directive and implementation of custom error pages.&lt;/p&gt;&lt;p&gt;Under Apache this is done via the &quot;ServerSignature&quot; and &quot;ServerTokens&quot; directives.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/&lt;/p&gt;</reference>
+						<cweid>497</cweid>
+						<wascid>13</wascid>
+						<sourceid>51</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10023</pluginid>
+						<alertRef>10023</alertRef>
+						<alert>Information Disclosure - Debug Error Messages</alert>
+						<name>Information Disclosure - Debug Error Messages</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The response appeared to contain common error messages returned by platforms such as ASP.NET, and Web-servers such as IIS and Apache. You can configure the list of common debug messages.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/</uri>
+									<nodeName>http://172.19.0.3/mutillidae/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>PHP error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>PHP error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=home.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>PHP error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=change-log.htm</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>php error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/attach/Know/WebHome</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/attach/Know/WebHome</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Internal Server Error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/attach/Main/OfficeLocations</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/attach/Main/OfficeLocations</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Internal Server Error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/attach/Main/TWikiGroups</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/attach/Main/TWikiGroups</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Internal Server Error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/attach/Main/TWikiUsers</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/attach/Main/TWikiUsers</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Internal Server Error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/attach/Main/WebHome</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/attach/Main/WebHome</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Internal Server Error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/attach/Main/WebPreferences</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/attach/Main/WebPreferences</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Internal Server Error</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/TWiki/WebChanges</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/TWiki/WebChanges</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>under construction</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/TWiki/WebIndex</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/TWiki/WebIndex</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>under construction</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>12</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Disable debugging messages before pushing to production.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference></reference>
+						<cweid>1295</cweid>
+						<wascid>13</wascid>
+						<sourceid>79</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10063</pluginid>
+						<alertRef>10063-1</alertRef>
+						<alert>Permissions Policy Header Not Set</alert>
+						<name>Permissions Policy Header Not Set</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/</uri>
+									<nodeName>http://172.19.0.3/dav/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=M;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/sitemap.xml</uri>
+									<nodeName>http://172.19.0.3/sitemap.xml</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy&lt;/p&gt;&lt;p&gt;https://developer.chrome.com/blog/feature-policy/&lt;/p&gt;&lt;p&gt;https://scotthelme.co.uk/a-new-security-header-feature-policy/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-feature-policy/&lt;/p&gt;&lt;p&gt;https://www.smashingmagazine.com/2018/12/feature-policy/&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>2</pluginid>
+						<alertRef>2</alertRef>
+						<alert>Private IP Disclosure</alert>
+						<name>Private IP Disclosure</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;A private IP (such as 10.x.x.x, 172.x.x.x, 192.168.x.x) or an Amazon EC2 private hostname (for example, ip-10-0-56-78) has been found in the HTTP response body. This information might be helpful for further attacks targeting internal systems.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=capture-data.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+172.19.0.6
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=documentation/how-to-access-Mutillidae-over-Virtual-Box-network.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>192.168.56.0</evidence>
+									<otherinfo>192.168.56.0
+192.168.56.0
+192.168.0.0
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/rdiff/Main/TWikiVariables</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/rdiff/Main/TWikiVariables</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+172.19.0.6
+172.19.0.6
+172.19.0.6
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/rdiff/TWiki/TWikiVariables</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/rdiff/TWiki/TWikiVariables</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/rdiff/TWiki/TextFormattingRules</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/rdiff/TWiki/TextFormattingRules</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+172.19.0.6
+172.19.0.6
+172.19.0.6
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/search/TWiki/?bookview=on&amp;regex=on&amp;scope=topic&amp;search=%5C.*</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/search/TWiki/ (bookview,regex,scope,search)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+172.19.0.6
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/TWiki/TWikiDocumentation</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/TWiki/TWikiDocumentation</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/TWiki/TWikiDocumentation?rev=1.41</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/TWiki/TWikiDocumentation (rev)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/TWiki/TWikiDocumentation?skin=print</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/TWiki/TWikiDocumentation (skin)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/TWiki/TWikiVariables</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/TWiki/TWikiVariables</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>172.19.0.6</evidence>
+									<otherinfo>172.19.0.6
+</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>10</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Remove the private IP address from the HTTP response body. For comments, use JSP/ASP/PHP comment instead of HTML/JavaScript comment which can be seen by client browsers.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;172.19.0.6&lt;/p&gt;&lt;p&gt;172.19.0.6&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc1918&lt;/p&gt;</reference>
+						<cweid>497</cweid>
+						<wascid>13</wascid>
+						<sourceid>218</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10037</pluginid>
+						<alertRef>10037</alertRef>
+						<alert>Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</alert>
+						<name>Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The web/application server is leaking information via one or more &quot;X-Powered-By&quot; HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>X-Powered-By: PHP/5.2.4-2ubuntu5.10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/</uri>
+									<nodeName>http://172.19.0.3/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>X-Powered-By: PHP/5.2.4-2ubuntu5.10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dvwa/</uri>
+									<nodeName>http://172.19.0.3/dvwa/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>X-Powered-By: PHP/5.2.4-2ubuntu5.10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dvwa/login.php</uri>
+									<nodeName>http://172.19.0.3/dvwa/login.php</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>X-Powered-By: PHP/5.2.4-2ubuntu5.10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>X-Powered-By: PHP/5.2.4-2ubuntu5.10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to suppress &quot;X-Powered-By&quot; headers.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework&lt;/p&gt;&lt;p&gt;https://www.troyhunt.com/shhh-dont-let-your-response-headers/&lt;/p&gt;</reference>
+						<cweid>497</cweid>
+						<wascid>13</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10036</pluginid>
+						<alertRef>10036-2</alertRef>
+						<alert>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</alert>
+						<name>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</name>
+						<riskcode>1</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Low (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;The web/application server is leaking version information via the &quot;Server&quot; HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8 (Ubuntu) DAV/2</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/robots.txt</uri>
+									<nodeName>http://172.19.0.3/robots.txt</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8 (Ubuntu) DAV/2</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/sitemap.xml</uri>
+									<nodeName>http://172.19.0.3/sitemap.xml</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8 (Ubuntu) DAV/2</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8 (Ubuntu) DAV/2</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/readme.txt</uri>
+									<nodeName>http://172.19.0.3/twiki/readme.txt</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache/2.2.8 (Ubuntu) DAV/2</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to suppress the &quot;Server&quot; header or provide generic details.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://httpd.apache.org/docs/current/mod/core.html#servertokens&lt;/p&gt;&lt;p&gt;https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)&lt;/p&gt;&lt;p&gt;https://www.troyhunt.com/shhh-dont-let-your-response-headers/&lt;/p&gt;</reference>
+						<cweid>497</cweid>
+						<wascid>13</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10096</pluginid>
+						<alertRef>10096</alertRef>
+						<alert>Timestamp Disclosure - Unix</alert>
+						<name>Timestamp Disclosure - Unix</name>
+						<riskcode>1</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Low (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;A timestamp was disclosed by the application/web server. - Unix&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/Main/OfficeLocations</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/Main/OfficeLocations</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>1790410002</evidence>
+									<otherinfo>1790410002, which evaluates to: 2026-09-26 08:06:42.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/Main/TWikiGroups</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/Main/TWikiGroups</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>1790410002</evidence>
+									<otherinfo>1790410002, which evaluates to: 2026-09-26 08:06:42.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/Main/TWikiUsers</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/Main/TWikiUsers</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>1790410002</evidence>
+									<otherinfo>1790410002, which evaluates to: 2026-09-26 08:06:42.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/Main/WebHome</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/Main/WebHome</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>1790409999</evidence>
+									<otherinfo>1790409999, which evaluates to: 2026-09-26 08:06:39.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/Sandbox/WebHome</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/Sandbox/WebHome</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>1790410002</evidence>
+									<otherinfo>1790410002, which evaluates to: 2026-09-26 08:06:42.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;1790410002, which evaluates to: 2026-09-26 08:06:42.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://cwe.mitre.org/data/definitions/200.html&lt;/p&gt;</reference>
+						<cweid>497</cweid>
+						<wascid>13</wascid>
+						<sourceid>436</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10021</pluginid>
+						<alertRef>10021</alertRef>
+						<alert>X-Content-Type-Options Header Missing</alert>
+						<name>X-Content-Type-Options Header Missing</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/</uri>
+									<nodeName>http://172.19.0.3/dav/</nodeName>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/dav/?C=D;O=A</uri>
+									<nodeName>http://172.19.0.3/dav/ (C)</nodeName>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/readme.txt</uri>
+									<nodeName>http://172.19.0.3/twiki/readme.txt</nodeName>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10111</pluginid>
+						<alertRef>10111</alertRef>
+						<alert>Authentication Request Identified</alert>
+						<name>Authentication Request Identified</name>
+						<riskcode>0</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Informational (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;The given request has been identified as an authentication request. The &apos;Other Info&apos; field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to &quot;Auto-Detect&quot; then this rule will change the authentication to match the request identified.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=user-info.php&amp;password=ZAP&amp;user-info-php-submit-button=View+Account+Details&amp;username=ZAP</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page,password,user-info-php-submit-button,username)</nodeName>
+									<method>GET</method>
+									<param>user-info-php-submit-button</param>
+									<attack></attack>
+									<evidence>password</evidence>
+									<otherinfo>userParam=user-info-php-submit-button
+userValue=View Account Details
+passwordParam=password
+referer=http://172.19.0.3/mutillidae/index.php?page=user-info.php</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/index.php</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/index.php ()(convcharset,lang,phpMyAdmin,pma_password,pma_username,server,token)</nodeName>
+									<method>POST</method>
+									<param>pma_username</param>
+									<attack></attack>
+									<evidence>pma_password</evidence>
+									<otherinfo>userParam=pma_username
+userValue=ZAP
+passwordParam=pma_password
+referer=http://172.19.0.3/phpMyAdmin/</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/index.php</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/index.php ()(pma_password,pma_username,server,token)</nodeName>
+									<method>POST</method>
+									<param>pma_username</param>
+									<attack></attack>
+									<evidence>pma_password</evidence>
+									<otherinfo>userParam=pma_username
+userValue=ZAP
+passwordParam=pma_password
+referer=http://172.19.0.3/phpMyAdmin/index.php</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=login.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)(login-php-submit-button,password,username)</nodeName>
+									<method>POST</method>
+									<param>login-php-submit-button</param>
+									<attack></attack>
+									<evidence>password</evidence>
+									<otherinfo>userParam=login-php-submit-button
+userValue=Login
+passwordParam=password
+referer=http://172.19.0.3/mutillidae/index.php?page=login.php</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>4</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;This is an informational alert rather than a vulnerability and so there is nothing to fix.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;userParam=user-info-php-submit-button&lt;/p&gt;&lt;p&gt;userValue=View Account Details&lt;/p&gt;&lt;p&gt;passwordParam=password&lt;/p&gt;&lt;p&gt;referer=http://172.19.0.3/mutillidae/index.php?page=user-info.php&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/&lt;/p&gt;</reference>
+						<cweid>-1</cweid>
+						<wascid>-1</wascid>
+						<sourceid>1662</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10024</pluginid>
+						<alertRef>10024</alertRef>
+						<alert>Information Disclosure - Sensitive Information in URL</alert>
+						<name>Information Disclosure - Sensitive Information in URL</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=user-info.php&amp;password=ZAP&amp;user-info-php-submit-button=View+Account+Details&amp;username=ZAP</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page,password,user-info-php-submit-button,username)</nodeName>
+									<method>GET</method>
+									<param>password</param>
+									<attack></attack>
+									<evidence>password</evidence>
+									<otherinfo>The URL contains potentially sensitive information. The following string was found via the pattern: pass
+password</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=password-generator.php&amp;username=anonymous</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page,username)</nodeName>
+									<method>GET</method>
+									<param>username</param>
+									<attack></attack>
+									<evidence>username</evidence>
+									<otherinfo>The URL contains potentially sensitive information. The following string was found via the pattern: user
+username</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/index.php?token=ed8c21010ccc20f7836d831f137ab411</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/index.php (token)</nodeName>
+									<method>GET</method>
+									<param>token</param>
+									<attack></attack>
+									<evidence>token</evidence>
+									<otherinfo>The URL contains potentially sensitive information. The following string was found via the pattern: token
+token</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/phpmyadmin.css.php?convcharset=utf-8&amp;js_frame=right&amp;lang=en-utf-8&amp;nocache=2457687151&amp;token=ed8c21010ccc20f7836d831f137ab411</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/phpmyadmin.css.php (convcharset,js_frame,lang,nocache,token)</nodeName>
+									<method>GET</method>
+									<param>token</param>
+									<attack></attack>
+									<evidence>token</evidence>
+									<otherinfo>The URL contains potentially sensitive information. The following string was found via the pattern: token
+token</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/phpmyadmin.css.php?js_frame=right&amp;nocache=2457687233&amp;token=ed8c21010ccc20f7836d831f137ab411</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/phpmyadmin.css.php (js_frame,nocache,token)</nodeName>
+									<method>GET</method>
+									<param>token</param>
+									<attack></attack>
+									<evidence>token</evidence>
+									<otherinfo>The URL contains potentially sensitive information. The following string was found via the pattern: token
+token</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Do not pass sensitive information in URIs.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The URL contains potentially sensitive information. The following string was found via the pattern: pass&lt;/p&gt;&lt;p&gt;password&lt;/p&gt;</otherinfo>
+						<reference></reference>
+						<cweid>598</cweid>
+						<wascid>13</wascid>
+						<sourceid>1662</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10027</pluginid>
+						<alertRef>10027</alertRef>
+						<alert>Information Disclosure - Suspicious Comments</alert>
+						<name>Information Disclosure - Suspicious Comments</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The response appears to contain suspicious comments which may help an attacker.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/</uri>
+									<nodeName>http://172.19.0.3/mutillidae/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>comments because no user will ever see 
+			</evidence>
+									<otherinfo>The following pattern was used: \bUSER\b and was detected in likely comment: &quot;&lt;!-- I think the database password is set to blank or perhaps samurai.
+			It depends on whether you installed this web app from&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/?page=text-file-viewer.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/ (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>comments because no user will ever see 
+			</evidence>
+									<otherinfo>The following pattern was used: \bUSER\b and was detected in likely comment: &quot;&lt;!-- I think the database password is set to blank or perhaps samurai.
+			It depends on whether you installed this web app from&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>comments because no user will ever see 
+			</evidence>
+									<otherinfo>The following pattern was used: \bUSER\b and was detected in likely comment: &quot;&lt;!-- I think the database password is set to blank or perhaps samurai.
+			It depends on whether you installed this web app from&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=login.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>){
+				if (theForm.username.value.length &gt; 15 |</evidence>
+									<otherinfo>The following pattern was used: \bUSERNAME\b and was detected in likely comment: &quot;&lt;!--
+	var l_loggedIn = false;
+var l_failedLogInFlag = &quot;0&quot;;
+var lValidateInput = &quot;FALSE&quot;
+
+	function onSubmitOfLoginForm(/*HTMLF&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=login.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>comments because no user will ever see 
+			</evidence>
+									<otherinfo>The following pattern was used: \bUSER\b and was detected in likely comment: &quot;&lt;!-- I think the database password is set to blank or perhaps samurai.
+			It depends on whether you installed this web app from&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=password-generator.php&amp;username=anonymous</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page,username)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>comments because no user will ever see 
+			</evidence>
+									<otherinfo>The following pattern was used: \bUSER\b and was detected in likely comment: &quot;&lt;!-- I think the database password is set to blank or perhaps samurai.
+			It depends on whether you installed this web app from&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>6</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The following pattern was used: \bUSER\b and was detected in likely comment: &quot;&lt;!-- I think the database password is set to blank or perhaps samurai.&lt;/p&gt;&lt;p&gt;			It depends on whether you installed this web app from&quot;, see evidence field for the suspicious comment/snippet.&lt;/p&gt;</otherinfo>
+						<reference></reference>
+						<cweid>615</cweid>
+						<wascid>13</wascid>
+						<sourceid>79</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10109</pluginid>
+						<alertRef>10109</alertRef>
+						<alert>Modern Web Application</alert>
+						<name>Modern Web Application</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/</uri>
+									<nodeName>http://172.19.0.3/mutillidae/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a href=&quot;#&quot;&gt;Core Controls&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=login.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a href=&quot;#&quot;&gt;Core Controls&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;noscript&gt;
+    &lt;fieldset class=&quot;tblFooters&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;phpMyAdmin&quot; value=&quot;0566fce43a752f71e87f56a0c824f65be175d142&quot; /&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Go&quot; /&gt;
+    &lt;/fieldset&gt;
+    &lt;/noscript&gt;</evidence>
+									<otherinfo>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/TWikiHistory.html</uri>
+									<nodeName>http://172.19.0.3/twiki/TWikiHistory.html</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a name=&quot;Appendix_B_TWiki_Development_Tim&quot;&gt; Appendix B: TWiki Development Timeline &lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/bin/view/Main/WebHome</uri>
+									<nodeName>http://172.19.0.3/twiki/bin/view/Main/WebHome</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a name=&quot;PageTop&quot;&gt;&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;This is an informational alert and so no changes are required.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.&lt;/p&gt;</otherinfo>
+						<reference></reference>
+						<cweid>-1</cweid>
+						<wascid>-1</wascid>
+						<sourceid>79</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10112</pluginid>
+						<alertRef>10112</alertRef>
+						<alert>Session Management Response Identified</alert>
+						<name>Session Management Response Identified</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The given response has been identified as containing a session management token. The &apos;Other Info&apos; field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to &quot;Auto-Detect&quot; then this rule will change the session management to use the tokens identified.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/dvwa/</uri>
+									<nodeName>http://172.19.0.3/dvwa/</nodeName>
+									<method>GET</method>
+									<param>PHPSESSID</param>
+									<attack></attack>
+									<evidence>PHPSESSID</evidence>
+									<otherinfo>cookie:PHPSESSID</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/</uri>
+									<nodeName>http://172.19.0.3/mutillidae/</nodeName>
+									<method>GET</method>
+									<param>PHPSESSID</param>
+									<attack></attack>
+									<evidence>PHPSESSID</evidence>
+									<otherinfo>cookie:PHPSESSID</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/</nodeName>
+									<method>GET</method>
+									<param>phpMyAdmin</param>
+									<attack></attack>
+									<evidence>phpMyAdmin</evidence>
+									<otherinfo>cookie:phpMyAdmin</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/index.php</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/index.php ()(convcharset,lang,phpMyAdmin,pma_password,pma_username,server,token)</nodeName>
+									<method>POST</method>
+									<param>pmaPass-1</param>
+									<attack></attack>
+									<evidence>pmaPass-1</evidence>
+									<otherinfo>cookie:pmaPass-1
+cookie:pmaUser-1</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/index.php</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/index.php ()(pma_password,pma_username,server,token)</nodeName>
+									<method>POST</method>
+									<param>pmaPass-1</param>
+									<attack></attack>
+									<evidence>pmaPass-1</evidence>
+									<otherinfo>cookie:pmaPass-1</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;This is an informational alert rather than a vulnerability and so there is nothing to fix.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;cookie:PHPSESSID&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/&lt;/p&gt;</reference>
+						<cweid>-1</cweid>
+						<wascid>-1</wascid>
+						<sourceid>41</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10049</pluginid>
+						<alertRef>10049-3</alertRef>
+						<alert>Storable and Cacheable Content</alert>
+						<name>Storable and Cacheable Content</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where &quot;shared&quot; caching servers such as &quot;proxy&quot; caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3</uri>
+									<nodeName>http://172.19.0.3</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/robots.txt</uri>
+									<nodeName>http://172.19.0.3/robots.txt</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/sitemap.xml</uri>
+									<nodeName>http://172.19.0.3/sitemap.xml</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/</uri>
+									<nodeName>http://172.19.0.3/twiki/</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/twiki/readme.txt</uri>
+									<nodeName>http://172.19.0.3/twiki/readme.txt</nodeName>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<systemic>true</systemic>
+						<solution>&lt;p&gt;Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:&lt;/p&gt;&lt;p&gt;Cache-Control: no-cache, no-store, must-revalidate, private&lt;/p&gt;&lt;p&gt;Pragma: no-cache&lt;/p&gt;&lt;p&gt;Expires: 0&lt;/p&gt;&lt;p&gt;This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7234&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231&lt;/p&gt;&lt;p&gt;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&lt;/p&gt;</reference>
+						<cweid>524</cweid>
+						<wascid>13</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10030</pluginid>
+						<alertRef>10030</alertRef>
+						<alert>User Controllable Charset</alert>
+						<name>User Controllable Charset</name>
+						<riskcode>0</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Informational (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;This check looks at user-supplied input in query string parameters and POST data to identify where Content-Type or meta tag charset declarations might be user-controlled. Such charset declarations should always be declared by the application. If an attacker can control the response charset, they could manipulate the HTML to perform XSS or other attacks. For example, an attacker controlling the &lt;meta&gt; element charset value is able to declare UTF-7 and is also able to include enough user-controlled payload early in the HTML document to have it interpreted as UTF-7. By encoding their payload with UTF-7 the attacker is able to bypass any server-side XSS protections and embed script in the page.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/index.php</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/index.php ()(convcharset,db,lang,phpMyAdmin,table,token)</nodeName>
+									<method>POST</method>
+									<param>convcharset</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>A(n) [META] tag [Content-Type] attribute
+
+The user input found was:
+convcharset=utf-8
+
+The charset value it controlled was:
+utf-8</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Force UTF-8 in all charset declarations. If user-input is required to decide a charset declaration, ensure that only an allowed list is used.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;A(n) [META] tag [Content-Type] attribute&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The user input found was:&lt;/p&gt;&lt;p&gt;convcharset=utf-8&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The charset value it controlled was:&lt;/p&gt;&lt;p&gt;utf-8&lt;/p&gt;</otherinfo>
+						<reference></reference>
+						<cweid>20</cweid>
+						<wascid>20</wascid>
+						<sourceid>351</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10031</pluginid>
+						<alertRef>10031</alertRef>
+						<alert>User Controllable HTML Element Attribute (Potential XSS)</alert>
+						<name>User Controllable HTML Element Attribute (Potential XSS)</name>
+						<riskcode>0</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Informational (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/?page=user-info.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/ (page)</nodeName>
+									<method>GET</method>
+									<param>page</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+http://172.19.0.3/mutillidae/?page=user-info.php
+
+appears to include user input in:
+a(n) [input] tag [value] attribute
+
+The user input found was:
+page=user-info.php
+
+The user-controlled value was:
+user-info.php</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/mutillidae/index.php?page=user-poll.php</uri>
+									<nodeName>http://172.19.0.3/mutillidae/index.php (page)</nodeName>
+									<method>GET</method>
+									<param>page</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+http://172.19.0.3/mutillidae/index.php?page=user-poll.php
+
+appears to include user input in:
+a(n) [input] tag [value] attribute
+
+The user input found was:
+page=user-poll.php
+
+The user-controlled value was:
+user-poll.php</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/index.php</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/index.php ()(convcharset,db,lang,phpMyAdmin,table,token)</nodeName>
+									<method>POST</method>
+									<param>lang</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+http://172.19.0.3/phpMyAdmin/index.php
+
+appears to include user input in:
+a(n) [html] tag [xml:lang] attribute
+
+The user input found was:
+lang=en
+
+The user-controlled value was:
+en</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://172.19.0.3/phpMyAdmin/index.php</uri>
+									<nodeName>http://172.19.0.3/phpMyAdmin/index.php ()(convcharset,db,lang,phpMyAdmin,table,token)</nodeName>
+									<method>POST</method>
+									<param>token</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+http://172.19.0.3/phpMyAdmin/index.php
+
+appears to include user input in:
+a(n) [input] tag [value] attribute
+
+The user input found was:
+token=ed8c21010ccc20f7836d831f137ab411
+
+The user-controlled value was:
+ed8c21010ccc20f7836d831f137ab411</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>4</count>
+						<systemic>false</systemic>
+						<solution>&lt;p&gt;Validate all input and sanitize output it before writing to any HTML attributes.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;http://172.19.0.3/mutillidae/?page=user-info.php&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;appears to include user input in:&lt;/p&gt;&lt;p&gt;a(n) [input] tag [value] attribute&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The user input found was:&lt;/p&gt;&lt;p&gt;page=user-info.php&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The user-controlled value was:&lt;/p&gt;&lt;p&gt;user-info.php&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html&lt;/p&gt;</reference>
+						<cweid>20</cweid>
+						<wascid>20</wascid>
+						<sourceid>349</sourceid>
+					</alertitem>
+				
+			</alerts>
+		</site>
+	
+	
+		<insights>
+			
+				<insight>
+					<level>Low</level>
+					<reason>Warning</reason>
+					<site></site>
+					<key>insight.log.error</key>
+					<description>ZAP errors logged - see the zap.log file for details</description>
+					<statistic>1</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Low</level>
+					<reason>Warning</reason>
+					<site></site>
+					<key>insight.log.warn</key>
+					<description>ZAP warnings logged - see the zap.log file for details</description>
+					<statistic>138</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Low</level>
+					<reason>Exceeded High</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.response.slow</key>
+					<description>Percentage of slow responses</description>
+					<statistic>87</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.code.2xx</key>
+					<description>Percentage of responses with status code 2xx</description>
+					<statistic>84</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.code.3xx</key>
+					<description>Percentage of responses with status code 3xx</description>
+					<statistic>6</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Exceeded Low</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.code.4xx</key>
+					<description>Percentage of responses with status code 4xx</description>
+					<statistic>8</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.application/pdf</key>
+					<description>Percentage of endpoints with content type application/pdf</description>
+					<statistic>1</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.application/x-javascript</key>
+					<description>Percentage of endpoints with content type application/x-javascript</description>
+					<statistic>1</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.image/gif</key>
+					<description>Percentage of endpoints with content type image/gif</description>
+					<statistic>1</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.image/jpeg</key>
+					<description>Percentage of endpoints with content type image/jpeg</description>
+					<statistic>1</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.image/png</key>
+					<description>Percentage of endpoints with content type image/png</description>
+					<statistic>1</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.image/x-icon</key>
+					<description>Percentage of endpoints with content type image/x-icon</description>
+					<statistic>1</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.text/css</key>
+					<description>Percentage of endpoints with content type text/css</description>
+					<statistic>1</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.text/html</key>
+					<description>Percentage of endpoints with content type text/html</description>
+					<statistic>88</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.ctype.text/plain</key>
+					<description>Percentage of endpoints with content type text/plain</description>
+					<statistic>7</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.method.GET</key>
+					<description>Percentage of endpoints with method GET</description>
+					<statistic>97</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.method.POST</key>
+					<description>Percentage of endpoints with method POST</description>
+					<statistic>2</statistic>
+				</insight>
+			
+			
+				<insight>
+					<level>Info</level>
+					<reason>Informational</reason>
+					<site>http://172.19.0.3</site>
+					<key>insight.endpoint.total</key>
+					<description>Count of total endpoints</description>
+					<statistic>1231</statistic>
+				</insight>
+			
+		</insights>
+	
+	
+	
+</OWASPZAPReport>
